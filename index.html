@@ -14,15 +14,20 @@
     </header>
 
     <main>
-        <label for="bodypart">Select Body Part:</label>
-        <select id="bodypart">
-            <option value="all">All</option>
-            <option value="knee">Knee</option>
-            <option value="hip">Hip</option>
-            <option value="shoulder">Shoulder</option>
-        </select>
-
-        <input type="text" id="search" placeholder="Search exercises...">
+        <div id="search">
+            <div id="main-left">
+                <label for="bodypart">Select Body Part:</label>
+                <select id="bodypart">
+                    <option value="all">All</option>
+                    <option value="knee">Knee</option>
+                    <option value="hip">Hip</option>
+                    <option value="shoulder">Shoulder</option>
+                </select>
+            </div>
+            <div id="main-right">
+                <input type="text" id="search" placeholder="Search exercises...">
+            </div>
+        </div>
 
         <div id="exerciseList"></div>
     </main>
