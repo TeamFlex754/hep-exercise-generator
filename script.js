@@ -38,18 +38,20 @@ const exercises = [
     }
 ]
 
+
 function displayExercises(list) {
     exerciseList.innerHTML = "";
 
-    list.forEach(exercise => {
+    for (let exercise of exercises) {
         exerciseList.innerHTML += `
             <div class="card">
                 <img src="${exercise.image}" alt="${exercise.name}">
                 <h3>${exercise.name}</h3>
                 <p>${exercise.description}</p>
                 <p><strong>${exercise.parameters}</strong></p>
+            </div>
         `;
-    });
+    }
 }
 
 displayExercises(exercises);
