@@ -21,6 +21,20 @@ const exercises = [
         description: "Lift your buttocks in the air.",
         parameters: "3 sets, 10 reps",
         image: "url",
+    },
+    {
+        bodyPart: "knee",
+        name: "Knee Extension",
+        description: "Straighten your knee. Lower slowly.",
+        parameters: "3 sets, 10 reps",
+        image: "url",
+    },
+    {
+        bodyPart: "ankle",
+        name: "Heel Raise",
+        description: "Raise your heels off the ground.",
+        parameters: "3 sets, 10 reps",
+        image: "url",
     }
 ]
 
