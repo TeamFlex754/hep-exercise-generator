@@ -1,5 +1,3 @@
-const exerciseList = document.getElementById("exerciseList");
-
 const exercises = [
     {
         bodyPart: "neck",
@@ -108,6 +106,10 @@ const exercises = [
     }
 ]
 
+const exerciseList = document.getElementById("exerciseList");
+const bodyPartSelect = document.getElementById("bodypart");
+const searchInput = document.getElementById("search");
+
 
 function displayExercises(list) {
     exerciseList.innerHTML = "";
@@ -124,4 +126,44 @@ function displayExercises(list) {
     }
 }
 
-displayExercises(exercises);
+
+function filterExercises() {
+    const selectedBodyPart = bodyPartSelect.value;
+    const searchText = searchInput.value.toLowerCase();
+
+    let results = [];
+
+    for (let exercise of exercises) {
+        let matchesBodyPart = false;
+        let matchesSearch = false;
+
+        if (selectedBodyPart === "all") {
+            matchesBodyPart = true;
+        } else if (exercise.bodyPart === selectedBodyPart) {
+            matchesBodyPart = true;
+        }
+
+        if (searchText === "") {
+            matchesSearch = true;
+        } else if (
+            exercise.name.toLowerCase().includes(searchText) ||
+            exercise.description.toLowerCase().includes(searchText)
+        ) {
+            matchesSearch = true;
+        }
+
+        if (matchesBodyPart && matchesSearch) {
+            results.push(exercise);
+        }
+    }
+
+    displayExercises(results)
+}
+
+
+
+
+filterExercises();
+
+document.getElementById("bodypart").addEventListener("change", filterExercises);
+document.getElementById("search").addEventListener("input", filterExercises);
