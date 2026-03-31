@@ -9,11 +9,39 @@ const exercises = [
         image: "url",
     },
     {
+        bodyPart: "neck",
+        name: "Upper Trap Stretch",
+        description: "Gently tilt your head to one side to stretch the opposite side of your neck.",
+        parameters: "3 sets, 20–30 sec hold",
+        image: "url"
+    },
+    {
+        bodyPart: "neck",
+        name: "Neck Rotation",
+        description: "Slowly turn your head side to side within a comfortable range.",
+        parameters: "3 sets, 10 reps each side",
+        image: "url"
+    },
+    {
         bodyPart: "shoulder",
         name: "Scap Retraction",
         description: "Pinch your shoulder blades together.",
         parameters: "3 sets, 10 reps",
         image: "url",
+    },
+    {
+        bodyPart: "shoulder",
+        name: "Wall Slides",
+        description: "Slide your arms up a wall while keeping them in contact with the surface.",
+        parameters: "3 sets, 10 reps",
+        image: "url"
+    },
+    {
+        bodyPart: "shoulder",
+        name: "Shoulder External Rotation",
+        description: "Rotate your arm outward while keeping your elbow at your side.",
+        parameters: "3 sets, 10 reps",
+        image: "url"
     },
     {
         bodyPart: "hip",
@@ -23,6 +51,20 @@ const exercises = [
         image: "url",
     },
     {
+        bodyPart: "hip",
+        name: "Clamshell",
+        description: "Lie on your side and lift your top knee while keeping your feet together.",
+        parameters: "3 sets, 12 reps",
+        image: "url"
+    },
+    {
+        bodyPart: "hip",
+        name: "Hip Flexor Stretch",
+        description: "Step into a lunge and gently push your hips forward to stretch the front of your hip.",
+        parameters: "3 sets, 20–30 sec hold",
+        image: "url"
+    },
+    {
         bodyPart: "knee",
         name: "Knee Extension",
         description: "Straighten your knee. Lower slowly.",
@@ -30,11 +72,39 @@ const exercises = [
         image: "url",
     },
     {
+        bodyPart: "knee",
+        name: "Straight Leg Raise",
+        description: "Lift your leg straight up while keeping your knee locked.",
+        parameters: "3 sets, 10 reps",
+        image: "url"
+    },
+    {
+        bodyPart: "knee",
+        name: "Hamstring Curl",
+        description: "Bend your knee to bring your heel toward your buttocks.",
+        parameters: "3 sets, 10 reps",
+        image: "url"
+    },
+    {
         bodyPart: "ankle",
         name: "Heel Raise",
         description: "Raise your heels off the ground.",
         parameters: "3 sets, 10 reps",
         image: "url",
+    },
+    {
+        bodyPart: "ankle",
+        name: "Ankle Circles",
+        description: "Rotate your ankle in a circular motion in both directions.",
+        parameters: "3 sets, 10 reps each direction",
+        image: "url"
+    },
+    {
+        bodyPart: "ankle",
+        name: "Toe Raises",
+        description: "Lift your toes off the ground while keeping your heels planted.",
+        parameters: "3 sets, 10 reps",
+        image: "url"
     }
 ]
 
@@ -42,7 +112,7 @@ const exercises = [
 function displayExercises(list) {
     exerciseList.innerHTML = "";
 
-    for (let exercise of exercises) {
+    for (let exercise of list) {
         exerciseList.innerHTML += `
             <div class="card">
                 <img src="${exercise.image}" alt="${exercise.name}">
