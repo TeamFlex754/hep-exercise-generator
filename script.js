@@ -109,6 +109,7 @@ const exercises = [
 const exerciseList = document.getElementById("exerciseList");
 const bodyPartSelect = document.getElementById("bodypart");
 const searchInput = document.getElementById("search");
+const searchForm = document.getElementById("search-container");
 
 
 function displayExercises(list) {
