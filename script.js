@@ -115,6 +115,11 @@ const searchForm = document.getElementById("search-container");
 function displayExercises(list) {
     exerciseList.innerHTML = "";
 
+    if (list.length === 0) {
+        exerciseList.innerHTML = "<p>No exercises found.</p>";
+        return;
+    }
+
     for (let exercise of list) {
         exerciseList.innerHTML += `
             <div class="card">
