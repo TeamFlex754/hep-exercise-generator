@@ -162,9 +162,11 @@ function filterExercises() {
 }
 
 
-
-
 filterExercises();
 
 document.getElementById("bodypart").addEventListener("change", filterExercises);
 document.getElementById("search").addEventListener("input", filterExercises);
+searchForm.addEventListener("submit", function(event){
+    event.preventDefault();
+    filterExercises();
+});
